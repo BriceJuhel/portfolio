@@ -1,14 +1,55 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio Card</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/20cee36f21.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <a href="./Projet Login Page/loginpage.html">Projet page de connexion</a>
-    <br>
-    <a href="./Projet calculatrice/calculatrice.html">Projet calculatrice</a>
+<body id="body" class="theme--dark">
+    <input type="checkbox" id="menu">
+    <input type="checkbox" id="night">
+    <div id="container">
+        <div class="header">
+            <label for="night" class="night-mode" onclick="enableNight()">
+                <i class="fa-solid fa-moon"></i>
+            </label>
+        </div>
+        <section class="left-section">
+            <img src="profile.jpg" alt="" class="profile-pic">
+            <div class="profile-details">
+                <span class="profile-maps">
+                    <i class="fa-solid fa-location-dot"></i> Maine-et-Loire, FR
+                </span>
+                <p class="profile-name">Brice Juhel</p>
+                <span class="profile-summary">Web Developer</span>
+                <a href="#" class="profile-cv">Download CV</a>
+            </div>
+            <div class="profile-pils">
+                <span class="pils"><a href="./Projet calculatrice/calculatrice.html"><ion-icon name="calculator-outline"></ion-icon><br>Calculatrice</a></span>
+                <span class="pils"><a href="./Projet Login Page/loginpage.html"><ion-icon name="log-in-outline"></ion-icon><br> Login Page</a></span>
+                
+                <span class="pils"><a href="https://www.linkedin.com/in/brice-juhel/"><i class="fa-brands fa-linkedin"></i> Linkedin</a></span>
+            </div>
+        </section>
+        <div class="front-smooth"></div>
+    </div>
+    <script>
+        let enableNight = () => {
+            var body = document.getElementById("body");
+            if (body.classList.contains('theme--light')) {
+                body.classList.remove('theme--light');
+                body.classList.add('theme--dark');
+            } else {
+                body.classList.remove('theme--dark');
+                body.classList.add('theme--light');
+            }
+        }
+        
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
