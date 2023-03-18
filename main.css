@@ -6,7 +6,7 @@
 }
 
 .theme--light {
-  --back: #dfdfec;
+  background: url(images/background.jpg)no-repeat;
   --element: linear-gradient(45deg, #bfbfd9, #fff);
   --shadow: #bfbfd9;
   --pils-back: rgba(0, 0, 0, 0.05);
@@ -17,7 +17,7 @@
 }
 
 .theme--dark {
-  --back: #131417;
+  background: url(images/background.jpg)no-repeat;
   --element: linear-gradient(45deg, #101010, #2c3e50);
   --shadow: #3f5973;
   --pils-back: rgba(255, 255, 255, 0.05);
@@ -70,6 +70,7 @@ html, body {
   -webkit-animation: fade_in 1s forwards;
           animation: fade_in 1s forwards;
   opacity: 0;
+  border-radius: 15px;
 }
 
 #container .header {
